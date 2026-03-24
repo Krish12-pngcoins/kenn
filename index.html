@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenz Coffee House | Authentic Yemeni Organic Brews</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --espresso: #0a0a0a;
+            --gold: #d4af37;
+            --cream: #fdfbf7;
+            --off-white: #f4efe6;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background-color: var(--cream); color: var(--espresso); line-height: 1.6; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .section-padding { padding: 6rem 0; }
+
+        /* Navigation & Fixed Logo */
+        nav { position: fixed; top: 0; width: 100%; background-color: rgba(10, 10, 10, 0.98); z-index: 1000; padding: 0.8rem 0; border-bottom: 1px solid var(--gold); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo-wrapper { display: flex; align-items: center; text-decoration: none; gap: 12px; }
+        .logo-svg { height: 55px; width: 55px; }
+        .logo-text { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 700; color: var(--gold); letter-spacing: 3px; }
+
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: white; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Hero */
+        #hero { height: 60vh; background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%); display: flex; align-items: center; justify-content: center; text-align: center; color: var(--cream); border-bottom: 5px solid var(--gold); }
+        .hero-content h1 { font-family: var(--font-heading); font-size: 4rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .hero-content p { font-size: 1.2rem; font-family: var(--font-heading); font-style: italic; color: var(--off-white); }
+
+        /* About Section */
+        #about { background: white; text-align: center; }
+        .section-header h2 { font-family: var(--font-heading); font-size: 2.8rem; margin-bottom: 1rem; color: var(--espresso); }
+        .section-header div { width: 60px; height: 3px; background: var(--gold); margin: 15px auto 30px; }
+
+        /* Menu Grid - 65 Items */
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; }
+        .category-box h3 { font-family: var(--font-heading); font-size: 1.8rem; color: var(--gold); border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 1.5rem; margin-top: 2rem; }
+        .menu-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.8rem; padding: 8px; background: rgba(212, 175, 55, 0.03); border-radius: 4px; }
+        .item-name { font-weight: 500; font-size: 0.9rem; }
+        .item-price { font-family: var(--font-heading); font-weight: 700; color: #444; }
+
+        /* Location & Map */
+        #location { background-color: var(--off-white); }
+        .loc-content { display: flex; gap: 4rem; flex-wrap: wrap; }
+        .loc-info { flex: 1; min-width: 300px; }
+        .map-box { flex: 1.5; min-width: 300px; height: 450px; border-radius: 8px; border: 2px solid var(--gold); overflow: hidden; }
+        .hours-list { list-style: none; margin-top: 1.5rem; }
+        .hours-list li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+
+        footer { background: var(--espresso); color: white; padding: 4rem 0; text-align: center; border-top: 2px solid var(--gold); }
+        .social-links a { color: var(--gold); text-decoration: none; margin: 0 15px; font-weight: 600; font-size: 0.8rem; letter-spacing: 2px; }
+
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2.5rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo-wrapper">
+                <svg class="logo-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#d4af37" stroke-width="2"/>
+                    <path d="M35 45 C 35 65, 65 65, 65 45" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+                    <path d="M42 35 Q 50 25 58 35" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+                    <circle cx="58" cy="30" r="1.5" fill="#d4af37"/>
+                </svg>
+                <span class="logo-text">KENZ</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Visit</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Kenz Coffee House</h1>
+            <p>Premium Yemeni Coffee - 100% Organic</p>
+        </div>
+    </header>
+
+    <section id="about" class="section-padding">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <div class="section-header">
+                <h2>The Treasure of Yemen</h2>
+                <div></div>
+            </div>
+            <p>Founded by <strong>Abdulnaser Alnajjar</strong> and <strong>Moshtak Alamri</strong>, Kenz brings the ancient heritage of Yemeni coffee to Canton, Michigan. We source 100% organic beans directly from Yemeni farmers to provide a cultural experience in every cup.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="section-padding" style="background: #fff;">
+        <div class="container">
+            <div class="section-header" style="text-align: center;">
+                <h2>Our Full Menu</h2>
+                <p style="margin-top: -10px; font-style: italic; color: #666;">Tax included in all pricing</p>
+                <div></div>
+            </div>
+
+            <div class="menu-grid">
+                <div class="category-box">
+                    <h3>Bakery & Sweets</h3>
+                    <div class="menu-item"><span class="item-name">Dubai Chocolate Bar</span><span class="item-price">$10.00</span></div>
+                    <div class="menu-item"><span class="item-name">Pistachio Milk Cake</span><span class="item-price">$8.00</span></div>
+                    <div class="menu-item"><span class="item-name">Biscoff Milk Cake</span><span class="item-price">$8.00</span></div>
+                    <div class="menu-item"><span class="item-name">Strawberry Milk Cake</span><span class="item-price">$8.00</span></div>
+                    <div class="menu-item"><span class="item-name">Mocha Chocolate Milk Cake</span><span class="item-price">$8.00</span></div>
+                    <div class="menu-item"><span class="item-name">Classic Cheesecake</span><span class="item-price">$8.00</span></div>
+                    <div class="menu-item"><span class="item-name">Pistachio-Choc Croissant</span><span class="item-price">$8.00</span></div>
+                    <div class="menu-item"><span class="item-name">Dubai Choc Cheesecake</span><span class="item-price">$7.50</span></div>
+                    <div class="menu-item"><span class="item-name">Cookie Dough Cheesecake</span><span class="item-price">$7.50</span></div>
+                    <div class="menu-item"><span class="item-name">Biscouf Cheesecake</span><span class="item-price">$7.50</span></div>
+                    <div class="menu-item"><span class="item-name">Ice Cream Strawberry C/C</span><span class="item-price">$7.50</span></div>
+                    <div class="menu-item"><span class="item-name">Chocolate Croissant</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Lemon Cheesecake</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Tiramisu</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Yemeni Honeycomb</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Chocolate Chip Cake</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Biscoff Cheesecake</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Nutella Cheesecake</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Peanut Cheesecake</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Almond Croissants</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Baklava (Large)</span><span class="item-price">$6.50</span></div>
+                    <div class="menu-item"><span class="item-name">Cinnamon Roll</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Yemeni Sabayah</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Baklava (Small)</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Date Croissant</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Apple Croissant</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Cheese Pie</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Spinach Pie</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Zaatar Pie</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Meat Pie</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Basbosa</span><span class="item-price">$5.50</span></div>
+                </div>
+
+                <div class="category-box">
+                    <h3>Yemeni Style</h3>
+                    <div class="menu-item"><span class="item-name">Sana'ani</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Jubani</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Qisher</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Mofawar</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Adeni Chai</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Yemeni Black Tea</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Arabic Light Roast</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Turkish Coffee</span><span class="item-price">$5.00</span></div>
+
+                    <h3>Espresso Bar</h3>
+                    <div class="menu-item"><span class="item-name">Kenz Latte</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Caramel Macchiato</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Latte</span><span class="item-price">$6.50</span></div>
+                    <div class="menu-item"><span class="item-name">Matcha</span><span class="item-price">$6.50</span></div>
+                    <div class="menu-item"><span class="item-name">Mocha</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Cortado</span><span class="item-price">$6.00</span></div>
+                    <div class="menu-item"><span class="item-name">Espresso</span><span class="item-price">$5.00</span></div>
+                    <div class="menu-item"><span class="item-name">Hot Chocolate</span><span class="item-price">$4.50</span></div>
+                </div>
+
+                <div class="category-box">
+                    <h3>Refreshers & Mojitos</h3>
+                    <div class="menu-item"><span class="item-name">Strawberry Refresher</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Strawberry Mojito</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Wildberry Mojito</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Wildberry Refresher</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Mango Mojito</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Peach Mojito</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Peach Refresher</span><span class="item-price">$7.00</span></div>
+                    <div class="menu-item"><span class="item-name">Mango Refresher</span><span class="item-price">$7.00</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="section-padding">
+        <div class="container">
+            <div class="loc-content">
+                <div class="loc-info">
+                    <h2>Visit Us</h2>
+                    <p>42456 Cherry Hill Rd<br>Canton, Michigan 48187</p>
+                    <p style="margin-top: 10px; font-weight: 600; color: var(--gold);">(734) 892-2597</p>
+                    
+                    <ul class="hours-list">
+                        <li><span>Mon - Thu</span> <span>8:00 AM - 11:00 PM</span></li>
+                        <li><span>Fri - Sat</span> <span>8:00 AM - 12:00 AM</span></li>
+                        <li><span>Sunday</span> <span>8:30 AM - 11:00 PM</span></li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.9rem;">Order online through <strong>DoorDash</strong></p>
+                </div>
+                <div class="map-box">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.247167527653!2d-83.4593441!3d42.2946279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b5379e493399b%3A0x6a6d688006d6e7f1!2s42456%20Cherry%20Hill%20Rd%2C%20Canton%2C%20MI%2048187!5e0!3m2!1sen!2sus!4v1711314000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.instagram.com/kenzcoffeehouse/" target="_blank">INSTAGRAM</a>
+            <a href="https://www.facebook.com/people/Kenz-Coffee-House/61555725227749/" target="_blank">FACEBOOK</a>
+            <a href="https://www.tiktok.com/@kenzcoffeehouse" target="_blank">TIKTOK</a>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">© 2026 Kenz Coffee House. Premium Yemeni Imports.</p>
+    </footer>
+
+</body>
+</html>
